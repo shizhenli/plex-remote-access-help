@@ -1,4 +1,5 @@
 /* Plex v1.2.0 — cinematic home, responsive hero, reusable content blocks */
+:root{--plex-shell:1200px}
 .plex-site{background:#0a0a09;color:#151a17}
 .plex-site .site-header{max-width:1320px;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);padding:22px 28px}
 .plex-site .brand{color:#fff;letter-spacing:-.02em}
@@ -7,14 +8,14 @@
 .plex-site .site-footer{max-width:1320px;color:#a7a093;border-top-color:#2b2a25}
 
 .plex-hero{background:#080808;color:#fff;padding:24px 0 0}
-.plex-hero-frame{position:relative;width:1200px;max-width:calc(100% - 48px);margin:0 auto}
+.plex-hero-frame{position:relative;width:var(--plex-shell);max-width:calc(100% - 48px);margin:0 auto}
 .plex-hero-media{width:100%}
 .plex-hero-media picture,.plex-hero-media img{display:block;width:100%;height:auto}
 .plex-hero-media img{object-fit:contain;object-position:center}
 .plex-hero-overlay{position:absolute;left:52px;top:50%;transform:translateY(-50%);width:420px;z-index:2;display:flex;flex-direction:column;gap:22px}
 .plex-hero-copy{min-width:0}
 .plex-kicker{margin:0 0 14px;color:#e9b95f;text-transform:uppercase;letter-spacing:.19em;font-size:.72rem;font-weight:800}
-.plex-hero h1{font-size:48px;line-height:1.01;letter-spacing:-.045em;margin:0 0 17px;color:#fff;font-weight:850}
+.plex-hero h1{font-size:56px;line-height:1.01;letter-spacing:-.045em;margin:0 0 17px;color:#fff;font-weight:850}
 .plex-lead{font-size:16px;line-height:1.55;color:#d8d3c7;max-width:400px;margin:0 0 23px}
 .plex-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .plex-button{display:inline-block;background:#f4c568;color:#17130c;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:4px;letter-spacing:.01em;box-shadow:0 8px 28px rgba(244,197,104,.16);box-sizing:border-box;max-width:100%;white-space:normal;font-size:.95rem}
@@ -23,7 +24,7 @@
 .plex-proof{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;color:#c7c1b5;font-size:.82rem;line-height:1.35}
 .plex-proof li:before{content:"✓";color:#f4c568;font-weight:900;margin-right:7px}
 
-.plex-section{max-width:1150px;margin:0 auto;padding:88px 28px}
+.plex-section{width:var(--plex-shell);max-width:var(--plex-shell);margin:0 auto;padding:88px 28px;box-sizing:border-box}
 .plex-wrong,.plex-test,.plex-scope,.plex-faq{background:#f4efe4;color:#171b17}
 .plex-wrong{padding-top:78px;padding-bottom:84px}
 .plex-section h2{font-size:clamp(2.1rem,4vw,3.6rem);line-height:1;letter-spacing:-.045em;margin:0 0 34px;color:#101510}
@@ -31,7 +32,7 @@
 .plex-card{border:1px solid #bdb5a4;background:#faf6ed;padding:24px 24px 26px;border-radius:16px;min-height:0;height:100%;display:flex;flex-direction:column;box-sizing:border-box}
 .plex-num{color:#a87327;font-size:.78rem;font-weight:850;letter-spacing:.15em;margin:0 0 22px}
 .plex-card h3{font-size:1.28rem;margin:0 0 12px;letter-spacing:-.02em}
-.plex-card p:last-child{color:#4b514a;margin:0;line-height:1.65}
+.plex-card p:last-child{color:#4b514a;margin:0;line-height:1.65;font-size:1rem}
 .category-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:28px 0 8px}
 .category-card{display:block;border:1px solid #c9c0ae;border-radius:16px;background:#faf6ed;padding:24px;text-decoration:none;color:#172018}
 .category-card span{display:block;color:#a87327;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;font-weight:850;margin-bottom:10px}
@@ -88,7 +89,7 @@
   .plex-test{grid-template-columns:1fr;gap:32px}
   .plex-scope-grid{grid-template-columns:1fr;gap:38px}
   .plex-consult{grid-template-columns:1fr;gap:26px}
-  .plex-section{padding:64px 22px}
+  .plex-section{width:100%;max-width:100%;padding:64px 22px}
 }
 @media(max-width:760px){
   .plex-site .site-header{padding:16px 20px;display:block}

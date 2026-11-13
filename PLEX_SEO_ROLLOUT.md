@@ -20,7 +20,7 @@ Cloudflare 最新部署：
 | 页面 | Title | Description | Keywords |
 |---|---|---|---|
 | 首页 `/` | Plex Remote Access Help: Fix Plex Away From Home | Fix Plex remote access when Plex works at home but not away. Test CGNAT, router ports, relay, Tailscale, and mobile playback with a repeatable remote diagnosis. | `plex remote access` |
-| 指南目录 `/guides/` | Plex Remote Access Troubleshooting Guides | Step-by-step Plex remote access guides for CGNAT, closed ports, relay, Tailscale, buffering, and playback testing away from home. | `plex remote access guide`, `plex troubleshooting guides` |
+| 指南目录 `/guides/` | Plex Remote Access Troubleshooting Guides | Step-by-step Plex remote access guides for CGNAT, closed ports, relay, Tailscale, buffering, and playback testing away from home. | `plex remote access`（关键词导出无 Plex 词，已回退到已核验词） |
 | 文章 `/guides/plex-remote-access-help/` | Plex Remote Access Not Working: Diagnose the Path | Plex remote access not working? Diagnose CGNAT, closed ports, relay, Tailscale, and client playback with a repeatable test and rollback path. | `plex remote access not working`, `plex remote access` |
 
 三页 canonical 分别指向正式 URL；没有重复描述或模板占位字样。

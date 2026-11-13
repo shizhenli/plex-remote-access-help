@@ -20,6 +20,7 @@ Rules:
 - `keywords` is a per-page list; the shared base template emits `<meta name="keywords">`.
 - Plex homepage target: `plex remote access`.
 - Plex existing guide target: `plex remote access not working`.
+- Plex guide-index target: `plex remote access` (the 2026-11-12 keyword export contains no Plex terms, so the unverified guide phrases were not kept).
 - `og:type` is `article` for non-home pages.
 
 ## Breadcrumbs

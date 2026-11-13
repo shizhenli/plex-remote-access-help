@@ -1,4 +1,4 @@
-﻿baseURL = "https://plex-remote-access-help.pages.dev/"
+baseURL = "https://plex-remote-access-help.pages.dev/"
 languageCode = "en-us"
 title = "Plex Remote Access Help"
 enableRobotsTXT = true
@@ -14,7 +14,8 @@ og_image = "images/plex-social.jpg"
 hero_desktop = "images/plex-desktop-hero.webp"
 hero_mobile = "images/plex-mobile-hero.webp"
 body_image = "images/plex-service-test.webp"
-body_class = "plex-site"`ngoogle_site_verification = "t3bN_oVe3Rk3tArjwdil3lkyqlSCa_en4stLOpZqE5k"
+body_class = "plex-site"
+google_site_verification = "t3bN_oVe3Rk3tArjwdil3lkyqlSCa_en4stLOpZqE5k"
 [markup.goldmark.renderer]
 unsafe = true
 

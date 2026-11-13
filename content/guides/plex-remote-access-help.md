@@ -33,9 +33,12 @@ lastmod: 2026-11-13
 <p>These are two different questions and must not be conflated:</p>
 <ul>
   <li><strong>Connection:</strong> Plex Dashboard may show <em>Direct</em> or <em>Indirect</em>. “Indirect” usually means the stream is going through Plex Relay (or another indirect path); it does not automatically mean the video is transcoding.</li>
-  <li><strong>Playback:</strong> <em>Direct Play</em> means the client can play the file as-is. <em>Transcode</em> means the server is converting video, audio, or container. A relayed stream can still Direct Play if bandwidth allows; a direct connection can still transcode because of codec, subtitle, or client limits.</li>
+  <li><strong>Playback — Direct Play:</strong> the client supports the file container, video codec, audio codec, resolution, and bitrate, so the file is sent as-is without changing the media.</li>
+  <li><strong>Playback — Direct Stream:</strong> the client supports the video and audio streams but not the file container. The server extracts the original streams and repackages them into a compatible container on the fly. If only the container changes and the original video and audio streams are preserved, this is <strong>Direct Stream</strong>, not Transcode. A “partially transcoded direct stream” may convert only the audio while leaving the video untouched.</li>
+  <li><strong>Playback — Transcode:</strong> the client cannot handle the video or audio stream, so the server converts the incompatible track (and may also change resolution or bitrate). This is the CPU-intensive case.</li>
 </ul>
-<p>In Plex Dashboard → Now Playing, read both fields. A green Remote Access page is not acceptance, and “Direct” is not the same as “Direct Play.”</p>
+<p>In Plex Dashboard → Now Playing, read the connection field and the playback decision as separate facts. A relayed stream can still be Direct Play; a direct connection can still be Direct Stream or Transcode because of container, codec, subtitle, or client limits. A green Remote Access page is not acceptance, and “Direct” is not the same as “Direct Play.”</p>
+<p>Official definitions: <a href="https://support.plex.tv/articles/200430303-streaming-overview/" rel="noopener">Plex: Direct Play, Direct Stream, Transcoding Overview</a> and <a href="https://support.plex.tv/articles/200250387-streaming-media-direct-play-and-direct-stream/" rel="noopener">Plex: Streaming Media — Direct Play and Direct Stream</a>.</p>
 
 <h2>5. Choose one path</h2>
 <p><strong>Tailscale:</strong> install it on the Plex host and the client, sign into the same tailnet, and browse to the host’s Tailscale IP on port 32400. This avoids router changes but requires the Tailscale app on the client.</p>
@@ -48,7 +51,12 @@ tailscale ping &lt;peer-name-or-tailscale-ip&gt;</code></pre>
 <p><strong>Reverse proxy:</strong> only when you need a hostname and HTTPS for several users. It adds DNS, certificate, and proxy layers; test it after the direct path works.</p>
 
 <h2>6. Retest from outside</h2>
-<p>Use cellular data, play for at least two minutes, and check Plex Dashboard → Now Playing. Record whether the connection is direct or indirect, and separately whether the video is Direct Play or transcoding. Also note the client app and account used. A green Remote Access page alone is not acceptance.</p>
+<p>Use cellular data, play for at least two minutes, and check Plex Dashboard → Now Playing. Record two separate fields:</p>
+<ul>
+  <li><strong>Connection:</strong> Direct or Indirect.</li>
+  <li><strong>Playback:</strong> Direct Play, Direct Stream, or Transcode.</li>
+</ul>
+<p>Do not write “Direct” for both. A Direct connection with Direct Stream is a different result from Direct Play, and either can still be a problem if the client or network cannot sustain it. Also note the client app and account used. A green Remote Access page alone is not acceptance.</p>
 
 <h2>7. Rollback</h2>
 <p>Remove only the change you made: stop Tailscale, delete the one port-forward rule, or disable the proxy host. Confirm local playback still works. Keep a note of the original router/Plex values.</p>
@@ -62,6 +70,8 @@ tailscale ping &lt;peer-name-or-tailscale-ip&gt;</code></pre>
   <li><a href="https://support.plex.tv/articles/requirements-for-remote-playback-of-personal-media/" rel="noopener">Plex: Requirements for Remote Playback of Personal Media</a></li>
   <li><a href="https://support.plex.tv/articles/200931138-troubleshooting-remote-access/" rel="noopener">Plex: Troubleshooting Remote Access</a></li>
   <li><a href="https://support.plex.tv/articles/200289506-remote-access/" rel="noopener">Plex: Remote Streaming (Setting Up Remote Access)</a></li>
+  <li><a href="https://support.plex.tv/articles/200430303-streaming-overview/" rel="noopener">Plex: Direct Play, Direct Stream, Transcoding Overview</a></li>
+  <li><a href="https://support.plex.tv/articles/200250387-streaming-media-direct-play-and-direct-stream/" rel="noopener">Plex: Streaming Media — Direct Play and Direct Stream</a></li>
   <li><a href="https://www.rfc-editor.org/rfc/rfc6598" rel="noopener">RFC 6598: Shared Address Space (100.64.0.0/10)</a></li>
   <li><a href="https://tailscale.com/docs/reference/tailscale-cli" rel="noopener">Tailscale CLI documentation</a></li>
 </ul>

@@ -1,11 +1,118 @@
 {{ define "main" }}
-<article class="service">
-<p class="eyebrow">{{ .Site.Params.category }} · remote help</p>
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-<div class="cta">
-<a class="button" href="mailto:{{ .Site.Params.email }}?subject={{ .Site.Title | urlquery }}&body=Source%3A%20{{ .Site.Params.source }}%0A%0AWhat%20is%20failing%3F%0ADevice%20and%20OS%3F%0AWhat%20have%20you%20tried%3F">Request a scoped session</a>
-<p class="small">Include the device, OS, exact symptom, and what you already tried. No passwords in the first email.</p>
-</div>
-</article>
+<section class="plex-hero">
+  <div class="plex-hero-copy">
+    <p class="plex-kicker">PLEX REMOTE ACCESS HELP</p>
+    <h1>Plex works at home.<br><span>Why not away?</span></h1>
+    <p class="plex-lead">Remote troubleshooting for an existing Plex server. We test playback outside your home network and fix the path that is actually failing.</p>
+    <div class="plex-actions">
+      <a class="plex-button" href="#consult">Check my setup</a>
+      <a class="plex-secondary" href="/guides/plex-remote-access-help/">Read the guide</a>
+    </div>
+    <ul class="plex-proof">
+      <li>One Plex host + one client path</li>
+      <li>Tested on cellular, not just home Wi-Fi</li>
+      <li>Written rollback notes</li>
+    </ul>
+  </div>
+  <div class="plex-hero-media">
+    <picture>
+      <source media="(max-width: 760px)" srcset="{{ .Site.Params.hero_mobile | relURL }}" type="image/webp">
+      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="A home cinema with Plex playing on a television and a phone" fetchpriority="high">
+    </picture>
+  </div>
+</section>
+
+<section class="plex-section plex-wrong">
+  <p class="plex-kicker">THE THREE FAILURES WE SEE</p>
+  <h2>What is going wrong?</h2>
+  <div class="plex-cards">
+    <article class="plex-card">
+      <p class="plex-num">01</p>
+      <h3>It will not connect outside</h3>
+      <p>Plex says remote access is unavailable, or the phone cannot reach the server on cellular data.</p>
+    </article>
+    <article class="plex-card">
+      <p class="plex-num">02</p>
+      <h3>It connects indirectly</h3>
+      <p>Playback works through relay or an indirect path, then drops in quality or refuses a direct connection.</p>
+    </article>
+    <article class="plex-card">
+      <p class="plex-num">03</p>
+      <h3>It keeps buffering</h3>
+      <p>The library opens away from home, but the stream stalls, transcodes badly, or drops after a few minutes.</p>
+    </article>
+  </div>
+</section>
+
+<section class="plex-section plex-test">
+  <div class="plex-test-copy">
+    <p class="plex-kicker">HOW WE TEST</p>
+    <h2>Find the failing layer, then prove the fix.</h2>
+    <ol class="plex-steps">
+      <li><strong>Record the path.</strong> Check Plex Remote Access, the router WAN address, and whether the client is on cellular or another network.</li>
+      <li><strong>Rule out CGNAT.</strong> If the public address is shared by the carrier, port forwarding cannot work. Choose Tailscale, relay, or another approved path instead.</li>
+      <li><strong>Change one layer.</strong> Test the Plex host, one client, and one route. Keep the old value and roll back if the result does not improve.</li>
+      <li><strong>Play for two minutes.</strong> Confirm direct/indirect status, audio, and stability in Plex Dashboard. A green settings page is not the acceptance test.</li>
+    </ol>
+  </div>
+  <figure class="plex-test-media">
+    <img src="{{ .Site.Params.body_image | relURL }}" width="960" height="640" alt="A laptop running Plex next to a phone playing the same media" loading="eager">
+    <figcaption>We verify the server and the playback device together.</figcaption>
+  </figure>
+</section>
+
+<section class="plex-section plex-scope">
+  <p class="plex-kicker">SERVICE SCOPE</p>
+  <h2>What is included</h2>
+  <div class="plex-scope-grid">
+    <div>
+      <h3>Included</h3>
+      <ul>
+        <li>One existing Plex host and one client path</li>
+        <li>Remote-access diagnosis: CGNAT, port forwarding, relay, Tailscale, or reverse proxy</li>
+        <li>One playback test away from home</li>
+        <li>A short handover note with the tested result and rollback steps</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Not included</h3>
+      <ul>
+        <li>Building a new media library or acquiring content</li>
+        <li>Changing your whole-home router without approval</li>
+        <li>Guaranteed direct play on every device or ISP</li>
+        <li>Account passwords; attend the session or use a temporary grant</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="plex-section plex-faq">
+  <p class="plex-kicker">FAQ</p>
+  <h2>Before you book</h2>
+  <details>
+    <summary>Can you fix it if my ISP uses CGNAT?</summary>
+    <p>Port forwarding will not work, but a private path such as Tailscale or a relay-based setup may. We test which path your hardware and client can actually use.</p>
+  </details>
+  <details>
+    <summary>Do you need my Plex password?</summary>
+    <p>No. Attend the session or use a temporary grant. I do not ask for account passwords in the first email.</p>
+  </details>
+  <details>
+    <summary>Will this make every remote stream direct?</summary>
+    <p>No. The result depends on the ISP, router, upload speed, and client codecs. I test the best stable path and document the remaining limit.</p>
+  </details>
+  <details>
+    <summary>What should I send first?</summary>
+    <p>The Plex host OS, the client device, what happens on cellular, and what you have already tried. Do not send passwords.</p>
+  </details>
+</section>
+
+<section class="plex-consult" id="consult">
+  <div>
+    <p class="plex-kicker">NEXT STEP</p>
+    <h2>Tell us what happens away from home.</h2>
+    <p>Send the device, OS, exact symptom, and whether the client is on cellular or another Wi-Fi. We will confirm scope and a fixed quote before booking.</p>
+  </div>
+  <a class="plex-button" href="mailto:{{ .Site.Params.email }}?subject=Plex%20remote%20access%20help&body=Source%3A%20{{ .Site.Params.source }}%0A%0APlex%20host%20OS%3F%0AClient%20device%3F%0AWhat%20happens%20on%20cellular%3F%0AWhat%20have%20you%20tried%3F">Request a scoped session</a>
+</section>
 {{ end }}

@@ -116,7 +116,7 @@
     <p class="plex-kicker">NEXT STEP</p>
     <h2>Tell us what happens away from home.</h2>
     <p>Send the device, OS, exact symptom, and whether the client is on cellular or another Wi-Fi. We will confirm scope and a fixed quote before booking.</p>
-    <p class="plex-form-note">No passwords. A real reply comes from <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>.</p>
+    <p class="plex-form-note">No passwords. A real reply comes from <a href="{{ partial "fallback-mailto-href.html" . }}">{{ .Site.Params.email }}</a>.</p>
   </div>
   <form class="plex-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeWIEEXwIjnBnaQsVLfT_0Zb-J-VyCNhg160CFp2BF_EaEHRg/formResponse" method="POST" target="_blank">
     <input type="hidden" name="fvv" value="1">

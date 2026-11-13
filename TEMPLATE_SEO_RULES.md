@@ -87,6 +87,25 @@ Rules:
 - Do not put `aria-hidden="true"` on the visible hero container.
 - Purely decorative images keep `alt=""`.
 
+## Fallback email link
+
+The Google Forms form remains the primary inquiry path. Every existing fallback email link uses `layouts/partials/fallback-mailto-href.html`.
+
+Per-site config:
+
+```toml
+[params]
+fallback_email_subject = "Plex remote access help request"
+fallback_email_fields = [
+  "Plex host OS",
+  "Playback device",
+  "What happens on cellular",
+  "What you have tried",
+]
+```
+
+The partial builds `mailto:email?subject=...&body=...` with the configured subject and one line per configured field, plus the project source marker.
+
 ## Plex page mapping
 
 - Home: `content/_index.md`

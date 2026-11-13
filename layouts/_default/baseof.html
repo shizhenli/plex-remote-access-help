@@ -24,8 +24,8 @@
 {{ with .Site.Params.extra_css }}<link rel="stylesheet" href="{{ . | relURL }}">{{ end }}
 </head>
 <body class="{{ with .Site.Params.body_class }}{{ . }}{{ end }}">
-<header class="site-header"><a class="brand" href="/">{{ .Site.Title }}</a><nav><a href="/">Service</a><a href="/guides/">Guides</a><a href="mailto:{{ .Site.Params.email }}?subject={{ .Site.Title | urlquery }}">Contact</a></nav></header>
+<header class="site-header"><a class="brand" href="/">{{ .Site.Title }}</a><nav><a href="/">Service</a><a href="/guides/">Guides</a><a href="{{ partial "fallback-mailto-href.html" . }}">Contact</a></nav></header>
 <main>{{ block "main" . }}{{ end }}</main>
-<footer class="site-footer"><p>Remote help for one device at a time.</p><p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a> | <a href="/sitemap.xml">Sitemap</a></p></footer>
+<footer class="site-footer"><p>Remote help for one device at a time.</p><p><a href="{{ partial "fallback-mailto-href.html" . }}">{{ .Site.Params.email }}</a> | <a href="/sitemap.xml">Sitemap</a></p></footer>
 </body>
 </html>

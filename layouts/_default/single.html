@@ -6,6 +6,6 @@
 <p class="guide-date"><time datetime="{{ .Date.Format "2006-01-02" }}">Updated {{ .Date.Format "Jan 2, 2006" }}</time></p>
 {{ .Content }}
 <hr>
-<p><a href="/">Back to the Plex remote access service page</a> · <a href="mailto:{{ .Site.Params.email }}?subject={{ .Site.Title | urlquery }}%20question&body=Source%3A%20{{ .Site.Params.source }}">Ask about this exact symptom</a></p>
+<p><a href="/">Back to the Plex remote access service page</a> · <a href="{{ partial "fallback-mailto-href.html" . }}">Ask about this exact symptom</a></p>
 </article>
 {{ end }}

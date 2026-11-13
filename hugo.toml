@@ -9,6 +9,13 @@ description = "Fix Plex remote access when you are away from home: CGNAT, port f
 category = "HomeLab"
 source = "plex-remote-access-help"
 email = "hello@handytasklab.com"
+fallback_email_subject = "Plex remote access help request"
+fallback_email_fields = [
+  "Plex host OS",
+  "Playback device",
+  "What happens on cellular",
+  "What you have tried",
+]
 extra_css = "css/plex.css"
 og_image = "images/plex-social.jpg"
 hero_desktop = "images/plex-desktop-hero.webp"

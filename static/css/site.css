@@ -3,4 +3,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:
 .breadcrumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0}
 .breadcrumbs li+li:before{content:"›";margin-right:8px;color:#8a938c}
 .breadcrumbs a{color:#176b52;text-decoration:none}
+.guide pre{background:#e8f1ea;padding:14px 16px;overflow:auto;line-height:1.5;border-left:3px solid #2e7d5b}
+.guide code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em}
+.guide pre code{font-size:.85rem}
 .guide-date{font-size:.85rem;color:#52655c}

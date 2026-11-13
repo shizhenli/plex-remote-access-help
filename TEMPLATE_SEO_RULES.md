@@ -48,10 +48,10 @@ Include it at the top of guide/list and single layouts:
 
 - Source: `site.RegularPages`
 - Filter: `Section == "guides"`
-- Sort: newest first
+- Sort: `ByPublishDate.Reverse`
 - Limit: `first 10`
 - Drafts: excluded by Hugo production builds
-- Displays date, title link, description
+- Displays `PublishDate` (not `Date`) for the card date, plus title link and description
 - Includes an “All guides” link
 
 Include below the home consultation section:
@@ -102,11 +102,15 @@ Rules:
 
 ## Local verification
 
-Temporary test copy: 11 published sample articles + 1 draft.
+Local sample set: `local-samples/plex-latest-11/` — 11 published samples + 1 draft.
 
-Result:
+Result with `ByPublishDate.Reverse`:
 
 - Published cards rendered: **10**
-- Newest dates: 2026-11-11 down to 2026-11-02
+- First card: `Sample Plex Guide 01`, `date` 2026-11-01, `publishDate` 2026-11-12 (earlier date, newest actual publish)
+- Next: 2026-11-11 down to 2026-11-03
+- `sample-02` (publishDate 2026-11-02) excluded by the 10-card cap
 - Draft title present: **false**
-- Production build excluded the draft and capped the list at 10.
+- Cards display PublishDate, not Date.
+
+The samples are local only and are not part of the production content directory.

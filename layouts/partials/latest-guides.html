@@ -1,5 +1,5 @@
 {{- $guides := where site.RegularPages "Section" "guides" -}}
-{{- $guides = $guides.ByDate.Reverse -}}
+{{- $guides = $guides.ByPublishDate.Reverse -}}
 {{- $guides = first 10 $guides -}}
 <section class="latest-guides" id="latest-guides">
   <div class="latest-guides-head">
@@ -12,7 +12,7 @@
   <div class="latest-guides-grid">
     {{- range $guides -}}
     <article class="latest-card">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time>
       <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}</p>
     </article>

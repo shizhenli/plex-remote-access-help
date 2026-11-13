@@ -1,25 +1,29 @@
 {{ define "main" }}
 <section class="plex-hero">
-  <div class="plex-hero-copy">
-    <p class="plex-kicker">PLEX REMOTE ACCESS HELP</p>
-    <h1>Plex works at home but not away?</h1>
-    <p class="plex-lead">We troubleshoot your existing Plex setup remotely and test playback on mobile data.</p>
-    <div class="plex-actions">
-      <a class="plex-button" href="#consult">Request a quote</a>
-      <a class="plex-secondary" href="/guides/plex-remote-access-help/">Read the guide</a>
+  <div class="plex-hero-frame">
+    <div class="plex-hero-media">
+      <picture>
+        <source media="(max-width: 760px)" srcset="{{ "images/plex-mobile-hero-640.webp" | relURL }} 640w, {{ "images/plex-mobile-hero-768.webp" | relURL }} 768w" sizes="(max-width: 760px) calc(100vw - 40px), 1px" type="image/webp">
+        <img src="{{ "images/plex-desktop-hero-1200.webp" | relURL }}" srcset="{{ "images/plex-desktop-hero-1200.webp" | relURL }} 1200w, {{ "images/plex-desktop-hero-1920.webp" | relURL }} 1920w" sizes="(max-width: 1180px) calc(100vw - 40px), 1200px" width="1200" height="675" alt="{{ .Site.Params.hero_alt }}" title="{{ .Site.Params.hero_title }}" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="plex-hero-overlay">
+      <div class="plex-hero-copy">
+        <p class="plex-kicker">PLEX REMOTE ACCESS HELP</p>
+        <h1>Plex works at home but not away?</h1>
+        <p class="plex-lead">We troubleshoot your existing Plex setup remotely and test playback on mobile data.</p>
+        <div class="plex-actions">
+          <a class="plex-button" href="#consult">Request a quote</a>
+          <a class="plex-secondary" href="/guides/plex-remote-access-help/">Read the guide</a>
+        </div>
+      </div>
+      <ul class="plex-proof">
+        <li>One Plex host + one client path</li>
+        <li>Tested on cellular, not just home Wi-Fi</li>
+        <li>Written rollback notes</li>
+      </ul>
     </div>
   </div>
-  <div class="plex-hero-media">
-    <picture>
-      <source media="(max-width: 760px)" srcset="{{ .Site.Params.hero_mobile | relURL }}" type="image/webp">
-      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="{{ .Site.Params.hero_alt }}" title="{{ .Site.Params.hero_title }}" fetchpriority="high">
-    </picture>
-  </div>
-  <ul class="plex-proof">
-    <li>One Plex host + one client path</li>
-    <li>Tested on cellular, not just home Wi-Fi</li>
-    <li>Written rollback notes</li>
-  </ul>
 </section>
 
 <section class="plex-section plex-wrong">

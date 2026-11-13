@@ -18,8 +18,8 @@ fallback_email_fields = [
 ]
 extra_css = "css/plex.css"
 og_image = "images/plex-social.jpg"
-hero_desktop = "images/plex-desktop-hero.webp"
-hero_mobile = "images/plex-mobile-hero.webp"
+hero_desktop = "images/plex-desktop-hero-1200.webp"
+hero_mobile = "images/plex-mobile-hero-640.webp"
 hero_alt = "TV and phone showing the same video in a Plex remote access illustration"
 hero_title = "Plex remote access on TV and phone"
 body_image = "images/plex-service-test.webp"

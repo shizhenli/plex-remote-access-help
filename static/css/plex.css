@@ -6,32 +6,42 @@
 .plex-site main{max-width:none;padding:0}
 .plex-site .site-footer{max-width:1320px;color:#a7a093;border-top-color:#2b2a25}
 
-.plex-hero{position:relative;min-height:clamp(650px,72vh,780px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:#080808;color:#fff;max-width:none;margin:0}
-.plex-hero-bg{position:absolute;inset:0;z-index:0}
-.plex-hero-bg picture,.plex-hero-bg img{display:block;width:100%;height:100%}
-.plex-hero-bg img{object-fit:cover;object-position:right center}
-.plex-hero:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.94) 34%,rgba(5,5,5,.72) 52%,rgba(5,5,5,.28) 72%,rgba(5,5,5,.06) 100%)}
-.plex-hero-copy{position:relative;z-index:2;width:min(620px,50vw);margin-left:max(28px,calc((100vw - 1320px)/2));padding:64px 0 0}
+.plex-hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 600px;grid-template-areas:"copy media" "proof media";gap:28px 54px;max-width:1320px;margin:0 auto;padding:56px 28px 48px;background:#080808;color:#fff}
+.plex-hero-copy{grid-area:copy;align-self:end;min-width:0}
 .plex-kicker{margin:0 0 18px;color:#e9b95f;text-transform:uppercase;letter-spacing:.19em;font-size:.78rem;font-weight:800}
-.plex-hero h1{font-size:clamp(3rem,5.4vw,5.9rem);line-height:.96;letter-spacing:-.055em;margin:0 0 22px;color:#fff;font-weight:850}
+.plex-hero h1{font-size:clamp(2.8rem,4.6vw,4.8rem);line-height:.98;letter-spacing:-.055em;margin:0 0 22px;color:#fff;font-weight:850}
 .plex-lead{font-size:clamp(1.04rem,1.35vw,1.2rem);line-height:1.6;color:#d8d3c7;max-width:35rem;margin:0 0 30px}
 .plex-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
 .plex-button{display:inline-block;background:#f4c568;color:#17130c;text-decoration:none;font-weight:800;padding:15px 24px;border-radius:4px;letter-spacing:.01em;box-shadow:0 8px 28px rgba(244,197,104,.16);box-sizing:border-box;max-width:100%;white-space:normal}
 .plex-button:hover{background:#ffd47e}
 .plex-secondary{color:#fff;text-decoration:underline;text-underline-offset:5px;font-weight:650}
-.plex-proof{list-style:none;position:relative;z-index:2;width:min(620px,50vw);margin:28px 0 64px max(28px,calc((100vw - 1320px)/2));padding:0;display:flex;gap:20px;flex-wrap:wrap;color:#c7c1b5;font-size:.88rem}
+.plex-proof{list-style:none;grid-area:proof;width:auto;margin:0;padding:0;display:flex;gap:20px;flex-wrap:wrap;color:#c7c1b5;font-size:.88rem;align-self:start}
 .plex-proof li:before{content:"✓";color:#f4c568;font-weight:900;margin-right:7px}
-.plex-hero-mobile-media{display:none}
+.plex-hero-media{grid-area:media;width:600px;max-width:100%;align-self:center}
+.plex-hero-media picture,.plex-hero-media img{display:block;width:100%;height:auto}
+.plex-hero-media img{object-fit:contain;object-position:center}
 
 .plex-section{max-width:1150px;margin:0 auto;padding:88px 28px}
 .plex-wrong,.plex-test,.plex-scope,.plex-faq{background:#f4efe4;color:#171b17}
 .plex-wrong{padding-top:78px;padding-bottom:84px}
 .plex-section h2{font-size:clamp(2.1rem,4vw,3.6rem);line-height:1;letter-spacing:-.045em;margin:0 0 34px;color:#101510}
-.plex-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.plex-card{border:1px solid #bdb5a4;background:#faf6ed;padding:28px 26px 30px;min-height:230px}
+.plex-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plex-card{border:1px solid #bdb5a4;background:#faf6ed;padding:24px 24px 26px;border-radius:16px;min-height:0;height:100%;display:flex;flex-direction:column;box-sizing:border-box}
 .plex-num{color:#a87327;font-size:.78rem;font-weight:850;letter-spacing:.15em;margin:0 0 22px}
 .plex-card h3{font-size:1.28rem;margin:0 0 12px;letter-spacing:-.02em}
 .plex-card p:last-child{color:#4b514a;margin:0;line-height:1.65}
+.category-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:28px 0 8px}
+.category-card{display:block;border:1px solid #c9c0ae;border-radius:16px;background:#faf6ed;padding:24px;text-decoration:none;color:#172018}
+.category-card span{display:block;color:#a87327;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;font-weight:850;margin-bottom:10px}
+.category-card h2{font-size:1.45rem;margin:0 0 10px;color:#173f32}
+.category-card p{margin:0;color:#4b514a;line-height:1.6}
+.category-guides{margin:28px 0 20px;border-top:1px solid #c8c0af}
+.category-guide{padding:22px 0;border-bottom:1px solid #c8c0af}
+.category-guide time{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:#7d735f}
+.category-guide h2{font-size:1.55rem;margin:8px 0 8px}
+.category-guide p{margin:0;color:#4b514a;line-height:1.65}
+.guide-category{margin:0 0 24px;font-size:.9rem;color:#5f665b}
+.guide-category a{font-weight:750}
 
 .plex-test{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:78px;padding-bottom:78px}
 .plex-test h2{margin-bottom:28px}
@@ -66,14 +76,10 @@
 .plex-form-note{font-size:.78rem!important;color:#9d978a!important;margin-top:14px!important}.plex-form-note a{color:#e9b95f}
 
 @media(max-width:900px){
-  .plex-hero{display:block;min-height:0}
-  .plex-hero-bg{display:none}
-  .plex-hero:after{display:none}
-  .plex-hero-copy{width:auto;margin:0;padding:46px 26px 26px}
-  .plex-hero-mobile-media{display:block;width:100%;aspect-ratio:4/5;overflow:hidden;background:#131311}
-  .plex-hero-mobile-media picture,.plex-hero-mobile-media img{display:block;width:100%;height:100%}
-  .plex-hero-mobile-media img{object-fit:cover;object-position:center}
-  .plex-proof{width:auto;margin:0;padding:22px 26px 34px;display:flex}
+  .plex-hero{grid-template-columns:1fr;grid-template-areas:"copy" "media" "proof";gap:24px;padding:40px 26px 34px}
+  .plex-hero-copy{padding:0}
+  .plex-hero-media{width:min(600px,100%);margin:0 auto}
+  .plex-proof{width:auto;margin:0;padding:0;display:flex}
   .plex-cards{grid-template-columns:1fr}
   .plex-test{grid-template-columns:1fr;gap:32px}
   .plex-scope-grid{grid-template-columns:1fr;gap:38px}
@@ -84,14 +90,17 @@
   .plex-site .site-header{padding:16px 20px;display:block}
   .plex-site .site-header nav{margin-top:10px}
   .plex-site .site-header nav a{margin-left:0;margin-right:14px;font-size:.86rem}
-  .plex-hero-copy{padding:34px 22px 24px}
+  .plex-hero{padding:32px 22px 28px}
+  .plex-hero-copy{padding:0}
   .plex-hero h1{font-size:clamp(2.6rem,12vw,3.65rem);letter-spacing:-.06em;line-height:.98;margin-bottom:16px}
   .plex-lead{font-size:.98rem;line-height:1.5;margin-bottom:20px}
   .plex-actions{display:block}
   .plex-button{display:inline-block;margin-bottom:14px}
   .plex-secondary{font-size:.9rem}
-  .plex-proof{display:block;padding:18px 22px 28px}
+  .plex-hero-media{width:320px;max-width:100%;margin:24px auto 0}
+  .plex-proof{display:block;margin:20px 0 0;padding:0}
   .plex-proof li{margin-bottom:8px}
+  .plex-card{height:auto}
   .plex-section{padding:54px 20px}
   .plex-section h2{font-size:2.3rem}
   .plex-wrong{padding-top:54px}

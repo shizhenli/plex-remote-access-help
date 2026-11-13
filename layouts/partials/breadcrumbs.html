@@ -1,7 +1,12 @@
 {{- if not .IsHome -}}
 {{- $items := slice (dict "name" "Home" "url" site.Home.Permalink) -}}
-{{- if eq .Section "guides" -}}
-  {{- if .IsBranch -}}
+{{- if eq .RelPermalink "/categories/" -}}
+  {{- $items = $items | append (dict "name" "Categories" "url" .Permalink) -}}
+{{- else if eq .Section "categories" -}}
+  {{- with site.GetPage "/categories" -}}{{- $items = $items | append (dict "name" "Categories" "url" .Permalink) -}}{{- end -}}
+  {{- $items = $items | append (dict "name" .Title "url" .Permalink) -}}
+{{- else if eq .Section "guides" -}}
+  {{- if .Parent.IsHome -}}
     {{- $items = $items | append (dict "name" "Guides" "url" .Permalink) -}}
   {{- else -}}
     {{- with site.GetPage "/guides" -}}{{- $items = $items | append (dict "name" "Guides" "url" .Permalink) -}}{{- end -}}

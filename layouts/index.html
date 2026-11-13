@@ -1,10 +1,5 @@
 {{ define "main" }}
 <section class="plex-hero">
-  <div class="plex-hero-bg">
-    <picture>
-      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="{{ .Site.Params.hero_alt }}" title="{{ .Site.Params.hero_title }}" fetchpriority="high">
-    </picture>
-  </div>
   <div class="plex-hero-copy">
     <p class="plex-kicker">PLEX REMOTE ACCESS HELP</p>
     <h1>Plex works at home but not away?</h1>
@@ -14,9 +9,10 @@
       <a class="plex-secondary" href="/guides/plex-remote-access-help/">Read the guide</a>
     </div>
   </div>
-  <div class="plex-hero-mobile-media">
+  <div class="plex-hero-media">
     <picture>
-      <img src="{{ .Site.Params.hero_mobile | relURL }}" width="768" height="960" alt="{{ .Site.Params.hero_alt }}" title="{{ .Site.Params.hero_title }}" fetchpriority="high">
+      <source media="(max-width: 760px)" srcset="{{ .Site.Params.hero_mobile | relURL }}" type="image/webp">
+      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="{{ .Site.Params.hero_alt }}" title="{{ .Site.Params.hero_title }}" fetchpriority="high">
     </picture>
   </div>
   <ul class="plex-proof">

@@ -5,6 +5,8 @@ description: "Plex remote access not working? Check remote video entitlements, C
 keywords:
   - "plex remote access not working"
   - "plex remote access"
+categories:
+  - "Remote Access Troubleshooting"
 date: 2026-11-13
 lastmod: 2026-11-13
 ---

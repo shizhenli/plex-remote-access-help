@@ -4,6 +4,7 @@
 <p class="eyebrow">Plex troubleshooting guide</p>
 <h1>{{ .Title }}</h1>
 <p class="guide-date"><time datetime="{{ .Date.Format "2006-01-02" }}">Updated {{ .Date.Format "Jan 2, 2006" }}</time></p>
+{{ with .Params.categories }}<p class="guide-category">Category: <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a></p>{{ end }}
 {{ .Content }}
 <hr>
 <p><a href="/">Back to the Plex remote access service page</a> · <a href="{{ partial "fallback-mailto-href.html" . }}">Ask about this exact symptom</a></p>

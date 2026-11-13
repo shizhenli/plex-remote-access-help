@@ -1,25 +1,29 @@
 {{ define "main" }}
 <section class="plex-hero">
-  <div class="plex-hero-copy">
-    <p class="plex-kicker">PLEX REMOTE ACCESS HELP</p>
-    <h1>Plex works at home.<br><span>Why not away?</span></h1>
-    <p class="plex-lead">Remote troubleshooting for an existing Plex server. We test playback outside your home network and fix the path that is actually failing.</p>
-    <div class="plex-actions">
-      <a class="plex-button" href="#consult">Check my setup</a>
-      <a class="plex-secondary" href="/guides/plex-remote-access-help/">Read the guide</a>
-    </div>
-    <ul class="plex-proof">
-      <li>One Plex host + one client path</li>
-      <li>Tested on cellular, not just home Wi-Fi</li>
-      <li>Written rollback notes</li>
-    </ul>
-  </div>
-  <div class="plex-hero-media">
+  <div class="plex-hero-bg" aria-hidden="true">
     <picture>
-      <source media="(max-width: 760px)" srcset="{{ .Site.Params.hero_mobile | relURL }}" type="image/webp">
-      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="A home cinema with Plex playing on a television and a phone" fetchpriority="high">
+      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="" fetchpriority="high">
     </picture>
   </div>
+  <div class="plex-hero-copy">
+    <p class="plex-kicker">PLEX REMOTE ACCESS HELP</p>
+    <h1>Plex works at home but not away?</h1>
+    <p class="plex-lead">We troubleshoot your existing Plex setup remotely and test playback on mobile data.</p>
+    <div class="plex-actions">
+      <a class="plex-button" href="#consult">Request a quote</a>
+      <a class="plex-secondary" href="/guides/plex-remote-access-help/">Read the guide</a>
+    </div>
+  </div>
+  <div class="plex-hero-mobile-media" aria-hidden="true">
+    <picture>
+      <img src="{{ .Site.Params.hero_mobile | relURL }}" width="768" height="960" alt="" fetchpriority="high">
+    </picture>
+  </div>
+  <ul class="plex-proof">
+    <li>One Plex host + one client path</li>
+    <li>Tested on cellular, not just home Wi-Fi</li>
+    <li>Written rollback notes</li>
+  </ul>
 </section>
 
 <section class="plex-section plex-wrong">
@@ -113,6 +117,6 @@
     <h2>Tell us what happens away from home.</h2>
     <p>Send the device, OS, exact symptom, and whether the client is on cellular or another Wi-Fi. We will confirm scope and a fixed quote before booking.</p>
   </div>
-  <a class="plex-button" href="mailto:{{ .Site.Params.email }}?subject=Plex%20remote%20access%20help&body=Source%3A%20{{ .Site.Params.source }}%0A%0APlex%20host%20OS%3F%0AClient%20device%3F%0AWhat%20happens%20on%20cellular%3F%0AWhat%20have%20you%20tried%3F">Request a scoped session</a>
+  <a class="plex-button" href="mailto:{{ .Site.Params.email }}?subject=Plex%20remote%20access%20help&body=Source%3A%20{{ .Site.Params.source }}%0A%0APlex%20host%20OS%3F%0AClient%20device%3F%0AWhat%20happens%20on%20cellular%3F%0AWhat%20have%20you%20tried%3F">Email for a quote</a>
 </section>
 {{ end }}

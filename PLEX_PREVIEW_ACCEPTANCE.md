@@ -1,6 +1,6 @@
 # Plex 首页本地预览验收
 
-日期：2026-11-13 18:36 CST
+日期：2026-11-13 18:57 CST
 
 ## 预览地址
 
@@ -21,21 +21,21 @@
 
 ## 页面验收
 
-- 桌面 1440×1000：宽幅深色影院首屏，左侧标题/说明/金色按钮，右侧家庭影院图。
-- 手机 390×844：标题和按钮先出现，竖图在其下方；`scrollWidth = 390`，无横向溢出。
+- 桌面 1440×1000：主图铺满整个首屏，左侧暗区叠标题/说明/按钮；右侧电视和手机屏幕均保留。
+- 手机 390×844：压缩标题和说明，按钮在图片前；竖图之后接三条服务细节；`scrollWidth = 390`，无横向溢出。
 - 桌面首屏加载 `plex-desktop-hero.webp`（natural 1920×1080）。
 - 手机首屏加载 `plex-mobile-hero.webp`（natural 768×960）。
 - 正文图 `plex-service-test.webp` 在“How we test”旁，已加载。
-- CTA `Check my setup` 跳到 `#consult`。
+- 主按钮 `Request a quote` 跳到 `#consult`；咨询区按钮为 `Email for a quote`（mailto）。
 - `Read the guide` 指向 `/guides/plex-remote-access-help/`，HTTP 200，指南标题为 “Plex Remote Access Not Working: Diagnose the Path Before Changing Settings”。
 - 正文顺序：三个症状 → 排查/验证步骤 + 正文图 → 服务范围 → FAQ → 咨询入口。
 - 分享图设置 `og:image`，绝对地址基于正式 baseURL。
 
 ## 截图
 
-- [电脑首屏](<D:/20项目建站_20261113/preview-screens/plex-desktop-first.png>)
+- [电脑首屏](<D:/20项目建站_20261113/preview-screens/plex-desktop-hero.png>)
 - [电脑整页](<D:/20项目建站_20261113/preview-screens/plex-desktop-full.png>)
-- [手机首屏](<D:/20项目建站_20261113/preview-screens/plex-mobile-first.png>)
+- [手机首屏](<D:/20项目建站_20261113/preview-screens/plex-mobile-hero.png>)
 - [手机整页](<D:/20项目建站_20261113/preview-screens/plex-mobile-full.png>)
 
 ## 咨询状态

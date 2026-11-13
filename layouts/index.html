@@ -1,8 +1,8 @@
 {{ define "main" }}
 <section class="plex-hero">
-  <div class="plex-hero-bg" aria-hidden="true">
+  <div class="plex-hero-bg">
     <picture>
-      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="" fetchpriority="high">
+      <img src="{{ .Site.Params.hero_desktop | relURL }}" width="1920" height="1080" alt="{{ .Site.Params.hero_alt }}" title="{{ .Site.Params.hero_title }}" fetchpriority="high">
     </picture>
   </div>
   <div class="plex-hero-copy">
@@ -14,9 +14,9 @@
       <a class="plex-secondary" href="/guides/plex-remote-access-help/">Read the guide</a>
     </div>
   </div>
-  <div class="plex-hero-mobile-media" aria-hidden="true">
+  <div class="plex-hero-mobile-media">
     <picture>
-      <img src="{{ .Site.Params.hero_mobile | relURL }}" width="768" height="960" alt="" fetchpriority="high">
+      <img src="{{ .Site.Params.hero_mobile | relURL }}" width="768" height="960" alt="{{ .Site.Params.hero_alt }}" title="{{ .Site.Params.hero_title }}" fetchpriority="high">
     </picture>
   </div>
   <ul class="plex-proof">
@@ -60,7 +60,7 @@
     </ol>
   </div>
   <figure class="plex-test-media">
-    <img src="{{ .Site.Params.body_image | relURL }}" width="960" height="640" alt="A laptop running Plex next to a phone playing the same media" loading="eager">
+    <img src="{{ .Site.Params.body_image | relURL }}" width="960" height="640" alt="{{ .Site.Params.body_alt }}" title="{{ .Site.Params.body_title }}" loading="eager">
     <figcaption>We verify the server and the playback device together.</figcaption>
   </figure>
 </section>
@@ -129,4 +129,6 @@
     <button class="plex-button" type="submit">Send request</button>
   </form>
 </section>
+
+{{ partial "latest-guides.html" . }}
 {{ end }}

@@ -1,1 +1,20 @@
-{{ define "main" }}<article><h1>{{ .Title }}</h1>{{ .Content }}{{ range .Pages }}<p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}</article>{{ end }}
+{{ define "main" }}
+<article class="guide-index">
+{{ partial "breadcrumbs.html" . }}
+<p class="eyebrow">Plex troubleshooting library</p>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<div class="guide-index-list">
+{{ range .Pages.ByDate.Reverse }}
+  <article class="guide-index-item">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </article>
+{{ else }}
+  <p>No published guides yet.</p>
+{{ end }}
+</div>
+<p><a href="/">Back to the Plex remote access service page</a></p>
+</article>
+{{ end }}

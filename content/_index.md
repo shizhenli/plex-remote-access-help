@@ -1,6 +1,9 @@
 ---
 title: "Plex Remote Access Help"
-description: "Fix Plex remote access when you are away from home: CGNAT, port forwarding, relay, Tailscale, and client testing."
+seo_title: "Plex Remote Access Help: Fix Plex Away From Home"
+description: "Fix Plex remote access when Plex works at home but not away. Test CGNAT, router ports, relay, Tailscale, and mobile playback with a repeatable remote diagnosis."
+keywords:
+  - "plex remote access"
 ---
 <p>Plex remote access is not one setting. It is a path from the Plex host through the router, ISP, and client. I diagnose the actual break instead of toggling random options.</p>
 <h2>What is usually failing</h2>

@@ -4,14 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ with .Site.Params.google_site_verification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{- $pageTitle := .Title -}}
+{{- with .Params.seo_title }}{{ $pageTitle = . }}{{ end -}}
+{{- if not $pageTitle }}{{ $pageTitle = .Site.Title }}{{ end -}}
+{{- if and .IsHome (not .Params.seo_title) }}{{ $pageTitle = .Site.Title }}{{ end -}}
+{{- if and (not .IsHome) (not .Params.seo_title) }}{{ $pageTitle = printf "%s | %s" .Title .Site.Title }}{{ end -}}
+{{- $pageDesc := .Params.seo_description | default .Description | default .Site.Params.description -}}
+<title>{{ $pageTitle }}</title>
+<meta name="description" content="{{ $pageDesc }}">
+{{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if not hugo.IsProduction }}<meta name="robots" content="noindex, nofollow">{{ else }}<meta name="robots" content="index, follow">{{ end }}
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $pageDesc }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 {{ with .Site.Params.og_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 <link rel="stylesheet" href="/css/site.css">
 {{ with .Site.Params.extra_css }}<link rel="stylesheet" href="{{ . | relURL }}">{{ end }}

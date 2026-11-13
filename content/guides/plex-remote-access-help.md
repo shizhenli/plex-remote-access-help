@@ -1,6 +1,10 @@
 ---
 title: "Plex Remote Access Not Working: Diagnose the Path Before Changing Settings"
-description: "Project-specific diagnosis and retest steps for plex-remote-access-help."
+seo_title: "Plex Remote Access Not Working: Diagnose the Path"
+description: "Plex remote access not working? Diagnose CGNAT, closed ports, relay, Tailscale, and client playback with a repeatable test and rollback path."
+keywords:
+  - "plex remote access not working"
+  - "plex remote access"
 date: 2026-11-13
 ---
 <p>Plex remote access fails at one of four layers: the Plex host, the router/ISP path, the Plex relay, or the client network. Test the path in that order. Do not change the library or reinstall Plex until you know which layer fails.</p>

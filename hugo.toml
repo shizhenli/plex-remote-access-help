@@ -4,7 +4,7 @@ title = "Plex Remote Access Help"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 [params]
-template_version = "v1.2.0"
+template_version = "v1.3.0"
 description = "Fix Plex remote access when you are away from home: CGNAT, port forwarding, relay, Tailscale, and client testing."
 category = "HomeLab"
 source = "plex-remote-access-help"
@@ -13,7 +13,12 @@ extra_css = "css/plex.css"
 og_image = "images/plex-social.jpg"
 hero_desktop = "images/plex-desktop-hero.webp"
 hero_mobile = "images/plex-mobile-hero.webp"
+hero_alt = "TV and phone showing the same video in a Plex remote access illustration"
+hero_title = "Plex remote access on TV and phone"
 body_image = "images/plex-service-test.webp"
+body_alt = "Phone playing a video beside a laptop in a Plex remote access troubleshooting illustration"
+body_title = "Plex remote access playback test"
+latest_guides_title = "Latest Plex Troubleshooting Guides"
 body_class = "plex-site"
 google_site_verification = "t3bN_oVe3Rk3tArjwdil3lkyqlSCa_en4stLOpZqE5k"
 [markup.goldmark.renderer]

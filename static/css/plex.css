@@ -57,6 +57,13 @@
 .plex-consult{background:#0a0a09;color:#fff;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;max-width:1150px;margin:0 auto;padding:64px 28px 72px}
 .plex-consult h2{color:#fff;font-size:clamp(2rem,4vw,3.2rem);line-height:1;letter-spacing:-.04em;margin:0 0 16px}
 .plex-consult p:not(.plex-kicker){color:#c9c3b7;max-width:650px;line-height:1.65;margin:0}
+.plex-form{display:grid;gap:12px;min-width:360px}
+.plex-form label{display:grid;gap:6px;color:#d8d3c7;font-size:.82rem;font-weight:650}
+.plex-form input,.plex-form textarea{width:100%;box-sizing:border-box;background:#171713;color:#fff;border:1px solid #4b473d;border-radius:3px;padding:11px 12px;font:inherit;font-size:.94rem}
+.plex-form input:focus,.plex-form textarea:focus{outline:2px solid #f4c568;outline-offset:1px;border-color:#f4c568}
+.plex-form textarea{resize:vertical}
+.plex-form .plex-button{width:100%;text-align:center;border:0;cursor:pointer;font:inherit;font-weight:800}
+.plex-form-note{font-size:.78rem!important;color:#9d978a!important;margin-top:14px!important}.plex-form-note a{color:#e9b95f}
 
 @media(max-width:900px){
   .plex-hero{display:block;min-height:0}
@@ -90,4 +97,5 @@
   .plex-wrong{padding-top:54px}
   .plex-consult{padding:48px 20px 56px}
   .plex-consult .plex-button{width:100%;text-align:center}
+  .plex-form{min-width:0;width:100%}
 }

@@ -116,7 +116,17 @@
     <p class="plex-kicker">NEXT STEP</p>
     <h2>Tell us what happens away from home.</h2>
     <p>Send the device, OS, exact symptom, and whether the client is on cellular or another Wi-Fi. We will confirm scope and a fixed quote before booking.</p>
+    <p class="plex-form-note">No passwords. A real reply comes from <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>.</p>
   </div>
-  <a class="plex-button" href="mailto:{{ .Site.Params.email }}?subject=Plex%20remote%20access%20help&body=Source%3A%20{{ .Site.Params.source }}%0A%0APlex%20host%20OS%3F%0AClient%20device%3F%0AWhat%20happens%20on%20cellular%3F%0AWhat%20have%20you%20tried%3F">Email for a quote</a>
+  <form class="plex-form" action="https://formsubmit.co/lshizhen56@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Plex remote access inquiry [plex-remote-access-help]">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="site_source" value="{{ .Site.Params.source }}">
+    <label>Name<input type="text" name="name" autocomplete="name" required></label>
+    <label>Email<input type="email" name="email" autocomplete="email" required></label>
+    <label>What happens away from home?<textarea name="message" rows="4" required placeholder="Plex host OS, client device, cellular result, what you tried"></textarea></label>
+    <button class="plex-button" type="submit">Send request</button>
+  </form>
 </section>
 {{ end }}

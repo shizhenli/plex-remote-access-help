@@ -12,7 +12,7 @@ description: "Fix Plex remote access when you are away from home: CGNAT, port fo
 <li>One chosen path: Tailscale, router port forwarding, or reverse proxy</li>
 <li>Client test on phone/tablet/TV and a written handover</li></ul>
 <h2>Scope and boundaries</h2>
-<p>This is remote help for one computer and one playback or printing path. I do not change your router unless the chosen fix requires it and you approve it. I do not ask for account passwords; use a temporary session or attend the session.</p>
+<p>This is remote help for one Plex host and one client path. I do not change your router unless the chosen fix requires it and you approve it. I do not ask for account passwords; use a temporary session or attend the session.</p>
 <h2>How the session works</h2>
 <p>You send the device, OS, exact symptom, and what you already tried. We confirm the scope and a fixed quote before booking. The session is screen-shared and recorded only with your consent. You receive a short handover note with the tested result and rollback steps.</p>
 <p><a href="/guides/plex-remote-access-help/">Read the first troubleshooting guide</a> before booking if you want to check the basics yourself.</p>

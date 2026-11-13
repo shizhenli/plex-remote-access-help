@@ -2,7 +2,9 @@ baseURL = "https://plex-remote-access-help.pages.dev/"
 languageCode = "en-us"
 title = "Plex Remote Access Help"
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 [params]
+template_version = "v1.1.0"
 description = "Fix Plex remote access when you are away from home: CGNAT, port forwarding, relay, Tailscale, and client testing."
 category = "HomeLab"
 source = "plex-remote-access-help"

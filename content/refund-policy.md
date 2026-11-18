@@ -1,4 +1,4 @@
----
+﻿---
 title: "Cancellation and Refund Policy"
 seo_title: "Cancellation and Refund Policy | HandyTaskLab Plex Support"
 description: "Cancellation, rescheduling, and refund terms for HandyTaskLab Plex remote troubleshooting sessions."
@@ -20,7 +20,7 @@ description: "Cancellation, rescheduling, and refund terms for HandyTaskLab Plex
 </ul>
 
 <h2>How refunds are issued</h2>
-<p>Approved refunds are returned through Creem to the original payment method. Creem is the merchant of record and controls the payment and refund processing. Processing time depends on Creem and your bank or card issuer.</p>
+<p>Approved refunds are returned through the payment provider to the original payment method. The provider controls the payment and refund processing. Processing time depends on the payment provider and your bank or card issuer.</p>
 
 <h2>Chargebacks</h2>
 <p>Please contact <a href="mailto:hello@handytasklab.com">hello@handytasklab.com</a> before opening a chargeback so we can review the session record and resolve the issue directly.</p>
@@ -28,3 +28,5 @@ description: "Cancellation, rescheduling, and refund terms for HandyTaskLab Plex
 <h2>Contact</h2>
 <p>For a cancellation or refund request, reply to your quote email or write to <a href="mailto:hello@handytasklab.com">hello@handytasklab.com</a> with the quote or order ID.</p>
 <p>Last updated: 19 November 2026.</p>
+
+

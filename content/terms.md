@@ -1,4 +1,4 @@
----
+﻿---
 title: "Terms of Service"
 seo_title: "Terms of Service | HandyTaskLab Plex Support"
 description: "Terms for HandyTaskLab's one-to-one Plex remote troubleshooting service."
@@ -24,7 +24,7 @@ description: "Terms for HandyTaskLab's one-to-one Plex remote troubleshooting se
 <p>Plex, ISP, router, and client behaviour can depend on factors outside our control. We test the chosen path and document the result, but we do not guarantee direct play on every device, ISP, or network. The service is diagnostic and advisory; you decide whether to apply a change.</p>
 
 <h2>5. Price, quote, and payment</h2>
-<p>The price and scope are fixed in the written quote, which is valid for seven days. Payment is made through the Creem payment link issued for that quote. Creem is the merchant of record and handles payment processing, invoices, and applicable taxes. Do not pay a link that does not match your quote.</p>
+<p>The price and scope are fixed in the written quote, which is valid for seven days. Payment is made through the payment link issued for that quote. The payment provider named in the quote handles payment processing, invoices, and applicable taxes. Do not pay a link that does not match your quote.</p>
 
 <h2>6. Cancellation and refunds</h2>
 <p>Cancellation and refunds are governed by the <a href="/refund-policy/">Cancellation and Refund Policy</a>.</p>
@@ -35,3 +35,4 @@ description: "Terms for HandyTaskLab's one-to-one Plex remote troubleshooting se
 <h2>8. Contact</h2>
 <p>HandyTaskLab<br>Email: <a href="mailto:hello@handytasklab.com">hello@handytasklab.com</a><br>Service site: <a href="https://plex.handytasklab.com/">plex.handytasklab.com</a></p>
 <p>Last updated: 19 November 2026.</p>
+

@@ -17,15 +17,15 @@ keywords:
   <li>A short written handover with what was checked, what changed, the test result, and rollback steps.</li>
 </ul>
 
-<h2>Price</h2>
-<p><strong>USD 79.00</strong> for one 60-minute remote diagnostic session covering one Plex host and one client path. The price is fixed in the written quote before you pay. Additional devices, a second client path, or follow-up work outside the quoted scope require a separate quote and your approval.</p>
-<p>Payment is collected by Creem as merchant of record. The quote is valid for seven days. No payment is requested until you confirm the written scope and quote.</p>
+<h2>Price and quote</h2>
+<p>The fee, session length, and scope are confirmed in a written quote after we review your request. No price is charged or requested until you accept that quote. Additional devices, a second client path, or follow-up work outside the quoted scope require a separate quote and your approval.</p>
+<p>Payment is collected by the payment provider shown on the accepted quote. The quote is valid for seven days. No payment is requested before you confirm the written scope and quote.</p>
 
 <h2>How the quote works</h2>
 <ol>
   <li>Send the Plex host OS, client device, exact symptom, what you have tried, and your time zone through the <a href="/#consult">request form</a>.</li>
   <li>I confirm whether the problem is within scope and send a written quote with the price, session length, and proposed time.</li>
-  <li>You accept the quote in writing. I then send a Creem payment link tied to that quote.</li>
+  <li>You accept the quote in writing. I then send a payment link from the provider named in the quote, tied to that quote.</li>
   <li>After payment is confirmed, we schedule the session. You stay at the Plex host with the client device available.</li>
   <li>After the session you receive the written result and rollback notes.</li>
 </ol>

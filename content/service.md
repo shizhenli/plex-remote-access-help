@@ -18,7 +18,7 @@ keywords:
 </ul>
 
 <h2>Price</h2>
-<p><strong>A written quote is provided after the service scope is confirmed.</strong> The session length, deliverables, and price are stated in that written quote before any payment. Additional devices, a second client path, or follow-up work outside the quoted scope require a separate quote and your approval.</p>
+<p><strong>USD 79.00</strong> for one 60-minute remote diagnostic session covering one Plex host and one client path. The price is fixed in the written quote before you pay. Additional devices, a second client path, or follow-up work outside the quoted scope require a separate quote and your approval.</p>
 <p>Payment is collected by Creem as merchant of record. The quote is valid for seven days. No payment is requested until you confirm the written scope and quote.</p>
 
 <h2>How the quote works</h2>

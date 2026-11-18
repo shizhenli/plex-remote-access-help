@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ if eq .Section "guides" }}
 <article class="guide">
 {{ partial "breadcrumbs.html" . }}
 <p class="eyebrow">Plex troubleshooting guide</p>
@@ -7,6 +8,16 @@
 {{ with .Params.categories }}<p class="guide-category">Category: <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a></p>{{ end }}
 <div class="guide-body">{{ .Content }}</div>
 <hr>
-<p><a href="/">Back to the Plex remote access service page</a> · <a href="{{ partial "fallback-mailto-href.html" . }}">Ask about this exact symptom</a></p>
+<p><a href="/service/">Service scope and pricing</a> · <a href="{{ partial "fallback-mailto-href.html" . }}">Ask about this exact symptom</a></p>
 </article>
+{{ else }}
+<article class="guide legal-page">
+<p class="eyebrow">Plex remote access service</p>
+<h1>{{ .Title }}</h1>
+{{ with .Params.description }}<p class="legal-intro">{{ . }}</p>{{ end }}
+<div class="guide-body">{{ .Content }}</div>
+<hr>
+<p><a href="/service/">Service scope and pricing</a> · <a href="/#consult">Request a quote</a> · <a href="{{ partial "fallback-mailto-href.html" . }}">Email us</a></p>
+</article>
+{{ end }}
 {{ end }}

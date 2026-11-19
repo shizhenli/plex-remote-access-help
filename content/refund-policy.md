@@ -1,9 +1,17 @@
-﻿---
+---
 title: "Cancellation and Refund Policy"
 seo_title: "Cancellation and Refund Policy | HandyTaskLab Plex Support"
 description: "Cancellation, rescheduling, and refund terms for HandyTaskLab Plex remote troubleshooting sessions."
 ---
-<p>This policy applies to paid Plex remote troubleshooting sessions. It should be read with the <a href="/terms/">Terms of Service</a>.</p>
+<p>This policy applies to paid Plex remote troubleshooting sessions and digital diagnostic-kit downloads. It should be read with the <a href="/terms/">Terms of Service</a>.</p>
+
+<h2>Digital diagnostic kit downloads</h2>
+<ul>
+  <li>The Plex Remote Access Diagnostic Kit is delivered as an instant download after payment.</li>
+  <li>Because the files are delivered immediately, sales are final once the download has been delivered, except for non-delivery or a corrupt file.</li>
+  <li>If the download cannot be completed, or a PDF cannot be opened, contact us with the order ID. We will provide a replacement file or a refund if the file cannot be delivered.</li>
+  <li>This does not affect any statutory rights that cannot be excluded.</li>
+</ul>
 
 <h2>Before the session</h2>
 <ul>

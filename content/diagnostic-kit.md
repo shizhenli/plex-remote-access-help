@@ -24,7 +24,8 @@ checkout_url: ""
   <div>
     <p class="product-kicker">One-time purchase</p><p class="product-price">USD 19.00</p><p class="small">One-time payment. Instant digital download. Checkout opens after the Creem Live product is approved.</p>
   </div>
-  <div class="product-cta-disabled" aria-disabled="true">Checkout opens after review</div>
+  <a class="button product-buy" href="https://www.creem.io/product/prod_6hAwE83T8V8XoSqqHihOsO" rel="noopener">Buy now — USD 19.00</a>
+<p class="small">Secure checkout by Creem. Instant ZIP download after payment.</p>
 </div>
 
 <h2>Three routes, one decision at a time</h2>
